@@ -1,0 +1,159 @@
+рандомная генерация цитат, добавлена кнопка today's quote, добавлены стили для нее, добавлен массив quotes с набором цитат.
+Добавлены переменные для элементов модалки:
+quoteModal, openQuoteModal, closeQuoteModal, generateQuote, quoteText
+Реализовано:
+открытие / закрытие модалки,
+закрытие по клику на фон,
+генерация случайной цитаты при клике на Generate.
+
+
+CSS
+<button class="quote-toggle" id="openQuoteModal">today's quote</button>
+  </main>
+
+  <div class="modal-overlay hidden" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteText">
+    <div class="modal-card">
+      <button class="modal-close" id="closeQuoteModal" aria-label="Close quote dialog">×</button>
+      <p class="modal-quote" id="quoteText">Every flower is a soul blooming in silence.</p>
+      <button class="modal-generate" id="generateQuote">Generate</button>
+    </div>
+  </div>
+
+  .quote-toggle {
+  position: absolute;
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  padding: 0.9rem 2.4rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(176, 203, 226, 0.95);
+  color: #111;
+  font-family: "Antic Didone", serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.quote-toggle:hover,
+.quote-toggle:focus {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.3);
+  background: rgba(211, 226, 240, 0.96);
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 25, 45, 0.75);
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  z-index: 200;
+}
+.modal-overlay.hidden {
+  display: none;
+}
+.modal-card {
+  position: relative;
+  width: min(560px, 100%);
+  background: rgba(194, 216, 236, 0.92);
+  border-radius: 36px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.28);
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+}
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.85);
+  color: #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.modal-quote {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(1.8rem, 2.4vw, 3.2rem);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  font-family: "Antic Didone", serif;
+  text-shadow: 0 2px 4px rgba(255,255,255,0.6);
+}
+.modal-generate {
+  margin-top: 2.2rem;
+  padding: 0.95rem 2.6rem;
+  border: none;
+  border-radius: 999px;
+  background: #e5e9f1;
+  color: #111;
+  font-family: "Antic Didone", serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.modal-generate:hover,
+.modal-generate:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(0,0,0,0.24);
+}
+
+
+JS
+const quotes = [
+  'Flowers bloom softly, as if they remember how to hope.',
+  'A flower does not rush, yet it becomes everything it needs to be.',
+  'In every petal, there is a quiet kind of courage.',
+  'Flowers grow through dirt and still choose beauty.',
+  'A blooming flower is the earth smiling in color.',
+  'Even the smallest flower carries a universe of grace.',
+  'Flowers speak in colors when words are not enough.',
+  'A single flower can turn an ordinary moment into something gentle.',
+  'Flowers remind us that growth can be quiet and still powerful.',
+  'Petals fall, but the memory of their beauty lingers.',
+  'A flower blooms not for attention, but because it must.',
+  'There is something brave about a flower opening to the world.',
+  'Flowers hold sunlight in the softness of their petals.',
+  'Where flowers grow, something in the soul feels lighter.',
+  'A field of flowers is a reminder that life can be soft and wild at once.'
+];
+
+const quoteModal = document.getElementById('quoteModal');
+const openQuoteModal = document.getElementById('openQuoteModal');
+const closeQuoteModal = document.getElementById('closeQuoteModal');
+const generateQuote = document.getElementById('generateQuote');
+const quoteText = document.getElementById('quoteText');
+
+function openModal() {
+  quoteModal.classList.remove('hidden');
+}
+
+function closeModal() {
+  quoteModal.classList.add('hidden');
+}
+
+function getRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
+}
+
+openQuoteModal.addEventListener('click', openModal);
+closeQuoteModal.addEventListener('click', closeModal);
+quoteModal.addEventListener('click', (event) => {
+  if (event.target === quoteModal) {
+    closeModal();
+  }
+});
+generateQuote.addEventListener('click', () => {
+  quoteText.textContent = getRandomQuote();
+});
+
