@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Flolover</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antic+Didone:wght@400;700&family=Meddon&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Flolover</a>
+      <nav class="site-nav">
+        <a href="index.html">Welcome</a>
+        <a href="about.html">About us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#account">Account</a>
+      </nav>
+      <a class="favorite" href="#">❤</a>
+    </div>
+  </header>
+
+  <main class="gallery-page">
+    <section class="gallery-hero">
+      <div class="gallery-tabs">
+        <a class="gallery-tab" href="#">Tree-like peonies</a>
+        <a class="gallery-tab" href="#">Phalaenopsis</a>
+        <a class="gallery-tab" href="#">Sunflower</a>
+        <a class="gallery-tab" href="#">Narcissus papyraceus</a>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-copy">
+          <h1>Tree-like peonies</h1>
+          <p>History</p>
+          <p>Cultivated in China for over 1,500 years, tree peonies became the favorite flower of emperors during the Tang Dynasty. Later adopted in Japan, they spread to Europe in the 19th century.</p>
+          <p>In China, they symbolize wealth, honor, and nobility — known as the "king of flowers." In Japan, they represent bravery and good fortune. Woody stems, huge silky blooms, and a lifespan of over 100 years make them unforgettable.</p>
+        </div>
+
+        <div class="gallery-media">
+          <div class="gallery-video-block">
+            <video class="gallery-video" src="firstfl.MOV" autoplay loop muted playsinline></video>
+            <p class="video-label">A quiet first bloom in motion.</p>
+          </div>
+        </div>
+
+        <div class="gallery-images">
+          <div class="gallery-image gallery-image-large">
+            <img src="fl1.png" alt="Tree-like peony" />
+          </div>
+          <div class="gallery-image gallery-image-small">
+            <img src="fl2.png" alt="Peony detail" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="about-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">Flolover</span>
+      <div class="footer-info">
+        <span>© 2026</span>
+        <a href="mailto:email@example.com">email</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
