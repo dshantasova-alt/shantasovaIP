@@ -1,0 +1,95 @@
+6 коммит
+создание второй части стр gallery 
+|
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phalaenopsis | Flolover</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antic+Didone:wght@400;700&family=Meddon&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Flolover</a>
+      <nav class="site-nav">
+        <a href="index.html">Welcome</a>
+        <a href="about.html">About us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#account">Account</a>
+      </nav>
+      <a class="favorite" href="#">❤</a>
+    </div>
+  </header>
+
+  <main class="phalaenopsis-page">
+    <section class="phalaenopsis-hero">
+      <div class="phalaenopsis-header">
+        <a href="gallery.html" class="back-link">← Gallery</a>
+      </div>
+
+      <div class="gallery-tabs">
+        <a class="gallery-tab" href="#">Tree-like peonies</a>
+        <a class="gallery-tab active-tab" href="phalaenopsis.html">Phalaenopsis</a>
+        <a class="gallery-tab" href="#">Sunflower</a>
+        <a class="gallery-tab" href="#">Narcissus papyraceus</a>
+      </div>
+
+      <div class="phalaenopsis-grid">
+        <!-- Левая колонка - текст -->
+        <div class="phalaenopsis-copy">
+          <h1 class="phalaenopsis-title animate-text-in">Phalaenopsis</h1>
+          
+          <div class="phalaenopsis-text-block animate-text-in" style="animation-delay: 0.2s">
+            <p class="phalaenopsis-subtitle">Native to Southeast Asia</p>
+            <p>Phalaenopsis orchids were first discovered in the 17th century by Dutch botanist Georg Rumphius and gained European popularity in the 19th century, eventually becoming the most widely cultivated orchids worldwide. Their name means "moth-like" in Greek, referring to their butterfly-shaped flowers.</p>
+            <p>Today, they remain the most popular houseplant orchid globally.</p>
+          </div>
+
+          <div class="phalaenopsis-text-block animate-text-in" style="animation-delay: 0.4s">
+            <p class="phalaenopsis-subtitle">Growing characteristics</p>
+            <p>Phalaenopsis orchids are epiphytes, meaning they naturally grow on tree branches rather than in soil, absorbing moisture and nutrients from the air and rain through their thick, festive roots. They are among the most forgiving orchids for beginners, thriving in bright indirect light with minimal watering – typically once a week. Their flowering cycle lasts several months after which the spike can be cut to encourage reblooming.</p>
+          </div>
+        </div>
+
+        <!-- Средняя колонка - видео -->
+        <div class="phalaenopsis-media">
+          <div class="phalaenopsis-video-container animate-video-in">
+            <video class="phalaenopsis-video" autoplay loop muted playsinline>
+              <source src="2fl.MOV" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <!-- Правая колонка - изображения -->
+        <div class="phalaenopsis-gallery">
+          <div class="phalaenopsis-images-container animate-images-in">
+            <img class="phalaenopsis-main-image" src="becit2.png" alt="Phalaenopsis flowers" />
+            <div class="gallery-caption">
+              <p>Originating in Southeast Asia, Phalaenopsis orchids are prized for their long-lasting blooms and graceful appearance. They naturally grow as epiphytes on tree branches, absorbing moisture from the air. Today, they are among the most popular orchids worldwide.</p>
+              <div class="phalaenopsis-heart">❤</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="about-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">Flolover</span>
+      <div class="footer-info">
+        <span>© 2026</span>
+        <a href="mailto:email@example.com">email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
