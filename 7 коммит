@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account | Flolover</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antic+Didone:wght@400;700&family=Meddon&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Flolover</a>
+      <nav class="site-nav">
+        <a href="index.html">Welcome</a>
+        <a href="about.html">About us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="account.html">Account</a>
+      </nav>
+      <a class="favorite heart-trigger" href="#">❤</a>
+    </div>
+  </header>
+
+  <main class="account-page">
+    <section class="account-hero">
+      <div class="account-background" style="background-image: url('Group35.png'); background-size: cover; background-position: -100% center; margin-left: 80px;">
+        <div class="account-card">
+          <h1 class="account-title">Registration</h1>
+
+          <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+
+          <form class="account-form" id="registrationForm">
+            <input
+              type="tel"
+              class="form-input"
+              id="phoneInput"
+              placeholder="enter your phone number....."
+              aria-label="Phone number"
+            />
+            <span class="form-error" id="phoneError"></span>
+
+            <input
+              type="email"
+              class="form-input"
+              id="emailInput"
+              placeholder="enter your email....."
+              aria-label="Email address"
+            />
+            <span class="form-error" id="emailError"></span>
+
+            <input
+              type="password"
+              class="form-input"
+              id="passwordInput"
+              placeholder="password"
+              aria-label="Password"
+            />
+            <span class="form-error" id="passwordError"></span>
+
+            <button type="submit" class="form-submit-btn">Welcome to our website</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="about-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">Flolover</span>
+      <div class="footer-info">
+        <span>© 2026</span>
+        <a href="mailto:email@example.com">email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
